@@ -1,0 +1,110 @@
+.grid-container2 {
+  height: 100vh;
+  display: grid;
+  background-color: tomato;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 7.5% 1fr;
+  grid-template-areas: "head" "." "bar2" "bar3" "bar4" "bar5" "bar6" "bar7" "bar8" "bar9" "bar10" "bar11" "bar12" ".";
+  .graph-bar {
+    height: 60%;
+    width: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    background-color: #fff;
+    @include lato-font; //@include medium-box-shadow;
+    -webkit-box-shadow: 10px 8px rgba(black, 0.2);
+    box-shadow: 10px 8px rgba(black, 0.2); //box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    color: $slate;
+    font-weight: 400;
+    padding-left: 10px;
+    margin-left: 10px; //transition: width 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    -webkit-transition: width 1.5s ease;
+    -o-transition: width 1.5s ease;
+    transition: width 1.5s ease;
+  }
+  .knowledge-head {
+    grid-area: head;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    @include lato-font;
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 20px;
+    color: #fff;
+    div {
+      height: 55px;
+      width: 55px;
+      @include border-radius(50%);
+      @include medium-box-shadow;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: #fff;
+      color: black;
+      margin-right: 10px;
+    }
+  }
+  .bar-2 {
+    grid-area: bar2;
+  }
+  .bar-3 {
+    grid-area: bar3;
+  }
+  .bar-4 {
+    grid-area: bar4;
+  }
+  .bar-5 {
+    grid-area: bar5;
+  }
+  .bar-6 {
+    grid-area: bar6;
+  }
+  .bar-7 {
+    grid-area: bar7;
+  }
+  .bar-8 {
+    grid-area: bar8;
+  }
+  .bar-9 {
+    grid-area: bar9;
+  }
+  .bar-10 {
+    grid-area: bar10;
+  }
+  .bar-11 {
+    grid-area: bar11;
+  }
+  .bar-12 {
+    grid-area: bar12;
+  }
+  .bottom-bar {
+    display: none;
+  }
+}
+
+/*.grid-container2 div:nth-child(odd){
+  background-color: #ddd;
+}
+.grid-container2 div:nth-child(even){
+  background-color: #ccc;
+}*/

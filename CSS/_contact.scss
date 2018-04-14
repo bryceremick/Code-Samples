@@ -1,0 +1,141 @@
+.grid-container4 {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "head" "body";
+    .contact-head {
+        grid-area: head;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start;
+        @include lato-font;
+        font-size: 25px;
+        font-weight: 700;
+        padding-left: 20px;
+        div {
+            height: 55px;
+            width: 55px;
+            @include border-radius(50%);
+            @include medium-box-shadow;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background-color: $light-turquoise;
+            color: #fff;
+            margin-right: 10px;
+        }
+    }
+    .contact-body {
+        grid-area: body;
+        @include full-gradient(#8e44ad, #FC4195);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        form {
+            width: 40%;
+            height: auto;
+            padding: 40px;
+        }
+        form input {
+            display: block;
+            @include lato-font;
+            @include border-radius(0%);
+            -webkit-appearance: none;
+        }
+        .contact-textbox,
+        .contact-textarea {
+            width: 100%;
+            height: 50px;
+            border: none;
+            @include border-box;
+            @include tiny-box-shadow;
+            font-size: 15px;
+            margin-bottom: 5px;
+            padding-left: 5px;
+            border-left: 5px solid transparent;
+            -webkit-transition: border-left .3s;
+            -o-transition: border-left .3s;
+            transition: border-left .3s;
+            @include border-radius(0%);
+            -webkit-appearance: none;
+            &:focus {
+                outline: none;
+                border-left: 5px solid $light-turquoise;
+            }
+        }
+        .contact-textarea {
+            height: 100px;
+            padding: 10px 5px;
+            display: block;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            height: 50px;
+            position: relative;
+            border: 0px;
+            color: #fff;
+            @include lato-font;
+            @include tiny-box-shadow;
+            font-weight: 700;
+            font-size: 20px;
+            background-color: $light-turquoise;
+            &:hover {
+                cursor: pointer;
+                background-color: #3FA89D;
+            }
+        }
+        .icon-grid {
+            width: 40%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "github codepen behance linkedin";
+            .icon-1 {
+                grid-area: "github";
+            }
+            .icon-2 {
+                grid-area: "codepen";
+            }
+            .icon-3 {
+                grid-area: "behance";
+            }
+            .icon-4 {
+                grid-area: "linkedin";
+            }
+            div {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+            }
+        }
+    }
+}

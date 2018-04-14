@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container1 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "left right";
+  background-image: url("../images/me.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -ms-background-attachment: fixed;
+  -o-background-attachment: fixed;
+  .left,
+  .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .left {
+    grid-area: left;
+    h1 {
+      @include raleway-font;
+      font-weight: 800;
+      font-size: 12vw;
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
+  .right {
+    grid-area: right;
+    h3 {
+      @include lato-font;
+      font-weight: 100;
+      font-size: 4vw;
+      color: #fff;
+      -webkit-text-decoration: underline $strawberry;
+      text-decoration: underline $strawberry;
+    }
+  }
+}
+
+.icon {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 5;
+  margin: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: $light-turquoise;
+  @include border-radius(50%);
+  @include medium-box-shadow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    -webkit-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    transform: translateY(2px);
+  }
+}
+
+.icon:nth-child(3) {
+  right: 70px;
+  background-color: $strawberry;
+}
+
+.icon:nth-child(4) {
+  right: 140px;
+  background-color: #fff;
+  color: black;
+}
